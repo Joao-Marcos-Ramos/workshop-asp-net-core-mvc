@@ -1,7 +1,17 @@
 ﻿@{
+    // Dentro desse @{} se aceita código C#
+    // O "href" cria um hiperlink
     ViewData["Title"] = "About";
 }
+
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>Aluno JMR @ViewData["aluno"]</p>
+
+<p>@ViewData["email"]</p>
+
+<address>
+
+    <strong>Mais informações: </strong><a href="http://www.google.com.br"> Procura no google ué</a>
+</address>

@@ -8,8 +8,12 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
+    // Todo controlador herda da classe controler.
     public class HomeController : Controller
     {
+        // Conjunto de métodos:
+        // IActionResult (resultado de uma ação)
+        // O próprio nome do método é mapeado para ação.
         public IActionResult Index()
         {
             return View();
@@ -17,8 +21,14 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            // Acessou um objeto chamado view data,
+            // Na chave "Message",
+            // Depois recebendo o valor: "Your application description page.".
+            ViewData["Message"] = "Site de vendas 'MVC' do curso C#.";
+            ViewData["aluno"] = "JMR";
+            ViewData["email"] = "jmramos625@gmail.com";
 
+            // View é um method builder, que retorna um IActionResult do tipo View
             return View();
         }
 
