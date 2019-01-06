@@ -11,6 +11,7 @@ namespace SalesWebMvc.Controllers
 {
     public class DepartmentsController : Controller
     {
+        // Dependência do SalesWebMvcContext
         private readonly SalesWebMvcContext _context;
 
         public DepartmentsController(SalesWebMvcContext context)
