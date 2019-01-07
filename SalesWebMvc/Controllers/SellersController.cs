@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SalesWebMvc.Service;
+using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
@@ -26,6 +27,20 @@ namespace SalesWebMvc.Controllers
 
             // 3- Depois encaminha os dados para minha view.
             return View(list);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Seller seller)
+        {
+            _sellerService.Insert(seller);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
