@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SalesWebMvc.Data;
+using SalesWebMvc.Service;
 
 namespace SalesWebMvc
 {
@@ -44,6 +45,7 @@ namespace SalesWebMvc
             // Quando se usa o "<>" quer dizer está parametrizando.
             // E isso registra o serviço no sistema de injeção de dependência.
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
